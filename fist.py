@@ -14,3 +14,7 @@ print("Seu IMC é: ", imc)
 print("--------------------")
 print("where is my code in git?")
 print("what is happining")
+print("All this changes will go to teste or to my main?")
+
+
+
