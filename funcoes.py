@@ -29,6 +29,8 @@ def is_year_leap(year):
         return False  # Não é divisível por 4, não é bissexto
 
 def days_in_month(year, month):
+    if year < 1582 or month < 1 or month > 12:
+        return None
     days = [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31]
     res = days[month - 1] #Se month = 1 (janeiro), days[1 - 1] = days[0], que é o primeiro item da lista (31 dias).
     if month == 2 and is_year_leap(year):
@@ -47,3 +49,32 @@ for i in range(len(test_years)):
         print("OK")
     else:
         print("Fracassado")
+
+#funcoes multiparametricas --------------------------
+
+def bmi(weight, height):
+    if height < 1.0 or height > 2.5 or weight < 20 or weight > 200:
+        return None
+    else:
+        return weight / height**2
+    
+print(bmi(352.5, 1.65))
+print(bmi(180.5, 1.6))
+
+#fatorial ---------------------------------
+
+def factorial_function(n):
+    if n < 0:
+        return None
+    if n < 2:
+        return 1
+ 
+    product = 1
+    for i in range(2, n + 1):
+        product *= i
+    return product
+ 
+ 
+for n in range(1, 6):  # testando
+    print(n, factorial_function(n))
+ 
