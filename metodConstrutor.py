@@ -43,3 +43,5 @@ Rafael.consegue_emprego("Empreendedor", 5500.0)
 print(f"{Rafael.nome} conseguiu a profissão '{Rafael.profissao}' com o salário médio de R${Rafael.salario}")
 Rafael.aumento_salario(0.3)
 print(f"{Rafael.nome} recebeu um aumento de salario, totalizando em R${Rafael.salario} mensais.")
+
+    
